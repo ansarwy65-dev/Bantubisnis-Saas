@@ -1,0 +1,76 @@
+/* Custom Styles for FinCuan SaaS */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Glassmorphism card effects */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth Tab transitions */
+.tab-pane {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toast show animation */
+.toast-active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Print styling for PDF export */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  aside, nav, footer, button, .no-print {
+    display: none !important;
+  }
+  #tab-dashboard {
+    display: block !important;
+  }
+  .bg-slate-800\/60, .bg-slate-900, .bg-slate-800 {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    color: black !important;
+  }
+  .text-white, .text-slate-200, .text-slate-300 {
+    color: #111 !important;
+  }
+  .text-slate-400 {
+    color: #555 !important;
+  }
+}
